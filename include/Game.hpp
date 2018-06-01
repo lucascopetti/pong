@@ -21,21 +21,28 @@ class Game : private sf::NonCopyable
 		
 
 	private:
-		static const float		PlayerSpeed;
+		static const float		Player1Speed;
+		static const float		Player2Speed;
 		static const sf::Time	TimePerFrame;
 
 		sf::RenderWindow		mWindow;
-		sf::Texture				mTexture;
-		sf::Sprite				mPlayer;
+		sf::Texture				mTexture1;
+		sf::Texture				mTexture2;
+		sf::Sprite				mPlayer1;
+		sf::Sprite				mPlayer2;
 		sf::Font				mFont;
 		sf::Text				mStatisticsText;
 		sf::Time				mStatisticsUpdateTime;
 
 		std::size_t				mStatisticsNumFrames;
-		bool					mIsMovingUp;
-		bool					mIsMovingDown;
-		bool					mIsMovingRight;
-		bool					mIsMovingLeft;
+		bool					mIsMovingUp1;
+		bool					mIsMovingDown1;
+		bool					mIsMovingRight1;
+		bool					mIsMovingLeft1;
+		bool					mIsMovingUp2;
+		bool					mIsMovingDown2;
+		bool					mIsMovingRight2;
+		bool					mIsMovingLeft2;
 };
 
 #endif // BOOK_GAME_HPP
